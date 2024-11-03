@@ -21,44 +21,9 @@ pip install mysqlclient
 CREATE DATABASE libraryapp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 python manage.py migrate
 
-python
-import django
-print(django.get_version())
+
+python manage.py createsuperuser
+
+python manage.py runserver
 exit()
 deactivate
-
-npr211.venv\Scripts\activate.bat
-
-cd webproject
-python manage.py runserver
-
-cd webproject
-d:\Study\2024\43.Phyton_Web\Projects\npr211.venv\Scripts\activate
-python manage.py startapp oneapp
-
---oneapp/view.py---
-from django.http import HttpResponse
-def index(request):
-    return HttpResponse("Hello World")
-
---setting.py--
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'oneapp'
-]
-
---webproject/urls.py--
-from django.urls import path
-from oneapp import views
-urlpatterns = [
-#     path('admin/', admin.site.urls),
-    path('',views.index, name="oneapp"),
-]
-
-python manage.py runserver
-```
