@@ -13,7 +13,13 @@ django-admin startproject libraryapp
 cd libraryapp
 python manage.py startapp book
 
+pip install pillow
+python manage.py makemigrations
+python manage.py migrate
 
+pip install mysqlclient
+CREATE DATABASE libraryapp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+python manage.py migrate
 
 python
 import django
