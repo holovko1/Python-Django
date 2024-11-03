@@ -1,5 +1,8 @@
 # npr211-python_web
 
+https://data-flair.training/blogs/django-crud-example/
+https://github.com/Karan-S-Mittal/LibraryApp/tree/master
+
 Begin Python
 ```
 python --version
