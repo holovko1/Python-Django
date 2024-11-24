@@ -20,4 +20,34 @@ py
 
 django-admin startproject blog
 cd blog
-py manage.py runserver 9178
+py manage.py runserver
+
+----------App and Templates----------
+.venv\Scripts\activate.bat
+cd blog
+py manage.py startapp posts
+py manage.py runserver
+
+py manage.py migrate
+py manage.py makemigrations
+py manage.py migrate
+
+----------Testing Django ORM----------
+py manage.py shell
+>>> from posts.models import Post
+>>> p=Post()
+>>> p
+>>> p.title="Перша новина. Привіт світ!"
+>>> p.save()
+>>> Post.objects.all()
+>>> exit()
+
+----------Model Post and str----------
+py manage.py shell
+>>> from posts.models import Post
+>>> p=Post()
+>>> p
+>>> p.title="Друга новина. Вареники з чорницею!"
+>>> p.save()
+>>> Post.objects.all()
+>>> exit()
