@@ -51,3 +51,12 @@ py manage.py shell
 >>> p.save()
 >>> Post.objects.all()
 >>> exit()
+
+----------Django Admin---------
+py manage.py runserver
+http://127.0.0.1:8000/admin
+ctrl+c
+py manage.py createsuperuser
+
+User: dev
+Password: Qwertry123

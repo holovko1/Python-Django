@@ -2,9 +2,18 @@
 
 {% block title %}
     Новини
-{% endblock title %}
+{% endblock %}
 
 {% block content %}
     <h1 class="text-center">Новини</h1>
-{% endblock content %}
-
+    <div class="container">
+        {% for post in posts %}
+            <div class="bg-body-tertiary p-5 mb-3 rounded">
+                <h3>{{post.title}}</h3>
+                <p class="lead">{{post.body}}</p>
+                <p class="text-end" style="text-transform: lowercase;">{{post.date|date:"d F Y H:i"}}</p>
+                <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs »</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
