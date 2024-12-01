@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.homepage),
     path('contact/', views.contact),
     path('posts/', include('posts.urls')),
+    path('users/', include('users.urls')),
     path("robots.txt", views.RobotsTxtView.as_view(content_type="text/plain"), name="robots"),
 ]
 
