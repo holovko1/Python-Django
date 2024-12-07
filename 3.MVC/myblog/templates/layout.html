@@ -37,6 +37,9 @@
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="{% url 'users:register' %}">Реєстрація</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{% url 'users:login' %}">Авторизація</a>
+                </li>
               </ul>
               {% comment %} <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -53,9 +56,9 @@
     
     </main>
 
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
     {% block scripts %}
-    
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     {% endblock %}
 </body>
 </html>

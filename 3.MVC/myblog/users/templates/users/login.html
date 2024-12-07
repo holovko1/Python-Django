@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block title %}
-    Реєстрація нового користувача  
+    Авторизація користувача
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Реєстрація</h1>
+    <h1 class="text-center">Авторизація</h1>
     <link rel="stylesheet" href="{% static 'css/authorization.css' %}">
-    <div class="container" id="container">
+    <div class="container " id="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <form method="post" action="/users/register" class="needs-validation" novalidate>
@@ -40,16 +40,7 @@
                             </ul>
                         </div>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="password2" class="form-label">Підтвердження пароля</label>
-                        <input type="password" class="form-control" id="password2" name="password2" required>
-                        <div class="invalid-feedback">
-                            Паролі не збігаються.
-                        </div>
-                    </div>
-                    {% comment %} {{ form }} {% endcomment %}
-                    <button type="submit" class="btn btn-success">Реєструватися</button>
+                    <button type="submit" class="btn btn-success">Авторизуватися</button>
                 </form>
             </div>
         </div>
@@ -58,5 +49,5 @@
 {% endblock %}
 
 {% block scripts %}
-    <script src="{% static 'js/register.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 {% endblock %}

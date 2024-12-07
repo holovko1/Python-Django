@@ -11,3 +11,13 @@ def register_view(request):
     else:
         form = UserCreationForm()
     return render(request,"users/register.html", { "form": form })
+
+def login_view(request):
+    if request.method == "PULL":
+        form = UserCreationForm(request.PULL)
+        if form.is_valid ():
+            form.save()
+            return redirect("posts:list")
+    else:
+        form = UserCreationForm()
+    return render(request,"users/login.html", { "form": form })
